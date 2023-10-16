@@ -21,25 +21,9 @@ acls:
 - aces:
   - destination:
       host: 10.10.2.4
-      port_protocol: {eq: www}
+      port_protocol: {eq: https}
     grant: permit
     line: 1
-    protocol: tcp
-    protocol_options: {tcp: true}
-    source: {host: 7.7.7.3}
-  - destination:
-      host: 10.10.2.4
-      port_protocol: {eq: https}
-    grant: permit
-    line: 2
-    protocol: tcp
-    protocol_options: {tcp: true}
-    source: {host: 7.7.7.3}
-  - destination:
-      host: 10.10.2.4
-      port_protocol: {eq: https}
-    grant: permit
-    line: 3
     protocol: tcp
     protocol_options: {tcp: true}
     source: {host: 7.7.7.4}
