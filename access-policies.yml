@@ -1,6 +1,14 @@
 acls:
 - aces:
   - destination:
+      host: 7.7.7.5
+      port_protocol: {eq: https}
+    grant: permit
+    line: 1
+    protocol: tcp
+    protocol_options: {tcp: true}
+    source: {host: 10.10.2.3}
+  - destination:
       host: 7.7.7.2
       port_protocol: {eq: https}
     grant: permit
